@@ -12,7 +12,9 @@ Text Domain: 		@@PLUGIN_TEXT_DOMAIN@@
 Domain Path: 		/resources/lang
 */
 
+// If the plugin has been packed for distribution, autoload.php will be there
+@include_once __DIR__.'/vendor/autoload.php';
 // Allow for overriding pluggable core functions
 require_once __DIR__.'/src/functions.php';
 // Initialize the plugin
-$plugin = FatPanda\Illuminate\WordPress\Plugin::bootstrap(__FILE__);
+FatPanda\Illuminate\WordPress\Plugin::bootstrap(__FILE__);
