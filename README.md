@@ -14,13 +14,13 @@ We want to be able to build complex, custom applications on top of WordPress, an
 
 ## Features
 
-Use Laravel to build WordPress plugins
-Better organization for plugin files and folders
-Fluent syntax for defining REST API routes and rewrite rules
-Simple subclassing to define custom post types, comment types, and taxonomies
-Make better use of third-party libraries via [Composer](https://getcomposer.org/)
-Unit testing with PHPUnit and WP-CLI
-Do more with WordPress, faster
+* Use Laravel to build WordPress plugins
+* Better organization for plugin files and folders
+* Fluent syntax for defining REST API routes and rewrite rules
+* Simple subclassing to define custom post types, comment types, and taxonomies
+* Make better use of third-party libraries via [Composer](https://getcomposer.org/)
+* Unit testing with PHPUnit and WP-CLI
+* Do more with WordPress, faster
 
 See a complete working example plugin in the [auth-plugin-wordpress repo](https://github.com/withfatpanda/auth-plugin-wordpress).
 
@@ -55,7 +55,37 @@ You don't *have* to read it to be able to jump in, but having a better understan
   }
   ```
 
-5. Open your copy of `src/plugin.php` and establish a PHP namespace for your plugin:
+5. Switch to your [Bedrock](https://roots.io/bedrock)-based WordPress installation, and use Studio to make Composer aware of your plugin:
+
+  ```
+  studio load /path/to/your/plugin
+  ```
+
+6. Run Composer to install your plugin into Bedrock as a dependency:
+
+  ```
+  composer require your-namespace/your-plugin:"~1.0" 
+  ```
+
+7. Activate your plugin (especially easy if you're using WP-CLI):
+
+  ```
+  wp plugin activate your-plugin-name
+  ```
+
+## Folder Structure and Files
+
+
+
+## How Do I Learn More?
+
+Read the [documentation](https://withbamboo.com).
+
+## Before You Distribute Your Plugin
+
+Before you start distributing your plugin, you **must** make it your own by changing the default namespace and updating your Plugin's metadata.
+
+1. Open your copy of `src/plugin.php` and establish a PHP namespace for your plugin:
 
   ```php
   namespace ChangeThisNamespace; // change this...
@@ -66,7 +96,7 @@ You don't *have* to read it to be able to jump in, but having a better understan
 
   ```
 
-6. Open your copy of `bootstrap.php` and update your Plugin's metadata:
+2. Open your copy of `bootstrap.php` and update your Plugin's metadata:
 
   ```php
   /*
@@ -83,36 +113,16 @@ You don't *have* to read it to be able to jump in, but having a better understan
   */
   ```
 
-7. Switch to your [Bedrock](https://roots.io/bedrock)-based WordPress installation, and use Studio to make Composer aware of your plugin:
-
-  ```
-  studio load /path/to/your/plugin
-  ```
-
-8. Run Composer to install your plugin into Bedrock as a dependency:
-
-  ```
-  composer require your-namespace/your-plugin:"~1.0" 
-  ```
-
-9. Activate your plugin (especially easy if you're using WP-CLI):
-
-  ```
-  wp plugin activate your-plugin-name
-  ```
-
-If your plugin fails to activate with an Exception message about forgetting to change your namespace, go back and do Step 5 above. :+1:
-
-You'll then need to tell Composer to rebuild the autoloader for your WordPress installation—only then will you be able to activate your Plugin:
+3. Tell Composer to update your WordPress' autoloader—from the root of your WordPress installation:
 
   ```
   composer dumpautoload
   wp plugin activate your-plugin-name
   ```
 
-## OK, now what?
+## Distributing Your Plugin
 
-Read the [documentation](https://withbamboo.com).
+Coming soon.
 
 ## About This Project
 
@@ -135,9 +145,4 @@ If you run into a problem using this framework, please [open an issue](https://g
 If you want to help make this framework amazing, check out the [help wanted](https://github.com/withfatpanda/workbench-wordpress/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) list.
 
 If you'd like to support this and the other open source projects Fat Panda is building, please join our community of supporters on [Patreon](https://www.patreon.com/withfatpanda).
-
-
-
-
-
 
