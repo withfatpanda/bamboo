@@ -1,6 +1,7 @@
 # Composer 
 vendor/*
 !vendor/.gitkeep
+composer.lock
 
 # Studio
 studio.json
