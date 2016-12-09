@@ -1,0 +1,9 @@
+# Composer 
+vendor/*
+!vendor/.gitkeep
+
+# Studio
+studio.json
+
+# Other things
+.DS_Store
