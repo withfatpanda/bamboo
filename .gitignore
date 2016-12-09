@@ -2,6 +2,7 @@
 vendor/*
 !vendor/.gitkeep
 composer.lock
+composer.phar
 
 # Studio
 studio.json
