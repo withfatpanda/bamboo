@@ -3,7 +3,7 @@
     "description": "Build more with WordPress, faster, using this Plugin framework, based on Laravel.",
     "type": "wordpress-plugin",
     "license": "(GPLv2 or MIT)",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "authors": [
         {
           "name": "Fat Panda",

@@ -4,16 +4,26 @@ namespace ChangeThisNamespace; // change this...
 class Plugin // ...don't change this.
 
 extends \FatPanda\Illuminate\WordPress\Plugin {
+
+	/**
+   * The Artisan commands provided by your application.
+   * @see https://withbamboo.com/articles/artisan
+   * @var array
+   */
+	protected $commands = [
+		// e.g., YourNamespace\Console\Commands\YourCommand::class
+	];
 	
 	/**
 	 * Use this function to continue your Plugin's bootstrapping process—
 	 * register other Laravel providers, setup service container singletons,
 	 * load supplemental configuration files, etc.
+	 * @see https://withbamboo.com/articles/container
 	 * @see https://codex.wordpress.org/Plugin_API/Action_Reference/plugins_loaded
 	 */
 	function onPluginsLoaded()
 	{
-		
+
 	}
 
 	/**

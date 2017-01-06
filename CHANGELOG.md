@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.2.3
+
+* Fix an issue in default DB config
+* Lay-in pattern for organizing Laravel-based commands
+
 ## v1.2.2
 
 * Bring version into sequence with [illuminate-wordpress](https://github.com/withfatpanda/illuminate-wordpress)

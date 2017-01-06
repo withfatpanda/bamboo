@@ -1,5 +1,5 @@
 <?php
-global $wp_prefix;
+global $table_prefix;
 
 return [
 
@@ -56,7 +56,7 @@ return [
             'password'  => getenv('DB_PASSWORD') ?: '',
             'charset'   => getenv('DB_CHARSET') ?: 'utf8',
             'collation' => getenv('DB_COLLATE') ?: 'utf8_unicode_ci',
-            'prefix'    => getenv('DB_PREFIX') ?: 'wp_',
+            'prefix'    => getenv('DB_PREFIX') ?: $table_prefix,
             'timezone'  => getenv('DB_TIMEZONE') ?: '+00:00',
             'strict'    => getenv('DB_STRICT_MODE') ?: false,
         ],
