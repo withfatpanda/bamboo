@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v1.4.0
+## v1.4.3
 
 * Bump version number to match withfatpanda/illuminate-wordpress (core dependency)
 * Upgrade Laravel dependencies from 5.3.* to 5.4.*
