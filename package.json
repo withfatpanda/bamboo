@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "rmdist": "rimraf dist"
+  },
+  "engines": {
+    "node": ">= 6.9.4"
+  },
+  "devDependencies": {
+    "alertify.js": "^1.0.12",
+    "animate.css": "^3.5.2",
+    "axios": "^0.15.2",
+    "bootstrap": "^4.0.0-alpha.6",
+    "chart.js": "^2.5.0",
+    "chosen-js": "^1.6.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.0",
+    "laravel-echo": "^1.2.5",
+    "laravel-mix": "~0.8",
+    "lodash": "^4.16.2",
+    "pusher-js": "^4.0.0",
+    "tether": "^1.4.0",
+    "tinymce": "^4.5.5",
+    "vue": "^2.0.1"
+  }
+}

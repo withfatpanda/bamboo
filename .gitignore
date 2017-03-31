@@ -1,11 +1,20 @@
 # Composer 
 vendor/*
 !vendor/.gitkeep
-composer.lock
 composer.phar
+composer.lock
 
 # Studio
 studio.json
 
 # Other things
 .DS_Store
+
+# Node
+node_modules
+yarn.lock
+
+# Built assets
+dist
+
+

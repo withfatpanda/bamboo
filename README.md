@@ -17,7 +17,7 @@ We want to be able to build complex, custom applications on top of WordPress, an
 * Use Laravel to build WordPress plugins
 * Better organization for plugin files and folders
 * Fluent syntax for defining REST API routes and rewrite rules
-* Simple subclassing to define custom post types, comment types, and taxonomies
+* Create custom post types, comment types, and taxonomies with inheritance
 * Make better use of third-party libraries via [Composer](https://getcomposer.org/)
 * Unit testing with PHPUnit and WP-CLI
 * Do more with WordPress, faster

@@ -3,11 +3,11 @@
     "description": "Build more with WordPress, faster, using this Plugin framework, based on Laravel.",
     "type": "wordpress-plugin",
     "license": "(GPLv2 or MIT)",
-    "version": "1.2.3",
+    "version": "1.4.0",
     "authors": [
         {
-          "name": "Fat Panda",
-          "email": "yo@withfatpanda.com",
+          "name": "Aaron Collegeman",
+          "email": "aaron@withfatpanda.com",
           "homepage": "https://withbamboo.com"
         }
     ],
@@ -22,7 +22,12 @@
     },
     "require": {
         "php": ">=5.6.4",
-        "withfatpanda/illuminate-wordpress": "~1.2",
+        "withfatpanda/illuminate-wordpress": "1.4.*",
         "composer/installers": "~1.0.12"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "FatPanda\\Illuminate\\WordPress\\Plugin::postCreateProject"
+        ]
     }
 }
